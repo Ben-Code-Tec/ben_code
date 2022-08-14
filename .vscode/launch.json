@@ -8,7 +8,7 @@
             "name": "Python: Django",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/auth_test/manage.py",
+            "program": "${workspaceFolder}\\auth_test\\manage.py",
             "args": [
                 "runserver"
             ],

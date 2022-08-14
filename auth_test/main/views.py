@@ -21,7 +21,7 @@ def register_request(request):
 			messages.error(request, "Unsuccessful registration. Invalid information.")
 			return redirect('/register_error')
 	else: # if reguest login page
-		return render (request=request, template_name="main/register.html")
+		return render (request=request, template_name="main/sign up.html")
 
 def login_request(request):
 
@@ -45,7 +45,7 @@ def login_request(request):
 			return redirect('/login_error')
 
 	else:
-		return render(request=request, template_name="main/testsinup.html")
+		return render(request=request, template_name="main/sign in.html")
 
 def logout_request(request):
 	logout(request)

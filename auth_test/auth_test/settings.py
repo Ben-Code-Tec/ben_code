@@ -102,9 +102,9 @@ WSGI_APPLICATION = 'auth_test.wsgi.application'
 DATABASES = {
     'default': {
     'ENGINE': 'mysql.connector.django',
-    'NAME': 'loginsite',
-    'USER':'Erfan',
-    'PASSWORD':'erfan2325',
+    'NAME': 'django_login',
+    'USER':'root',
+    'PASSWORD':'aasm1385',
     'HOST':'localhost',
     'PORT':'',
     }
