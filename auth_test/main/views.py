@@ -23,9 +23,6 @@ def register_request(request):
 	else: # if reguest login page
 		return render (request=request, template_name="main/register.html")
 
-def register_error(request):
-	return render (request=request, template_name="main/register_error.html")
-
 def login_request(request):
 
 	if request.method == 'POST':
@@ -42,10 +39,10 @@ def login_request(request):
 				return redirect('/')
 
 			else:
-				messages.error(request,"Invalid username or password.")
+				return redirect('/login_error')
 
 		else:
-			messages.error(request,"Invalid username or password.")
+			return redirect('/login_error')
 
 	else:
 		return render(request=request, template_name="main/testsinup.html")
@@ -54,3 +51,9 @@ def logout_request(request):
 	logout(request)
 	messages.info(request, "You have successfully logged out.") 
 	return redirect('/login')
+
+def register_error(request):
+	return render (request=request, template_name="main/register_error.html")
+
+def login_error(request):
+	return render (request=request, template_name="main/login_error.html")
