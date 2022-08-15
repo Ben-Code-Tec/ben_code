@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'main',
 ]
 
-SITE_ID = 1
+SITE_ID = 2
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
@@ -60,7 +60,7 @@ SOCIALACCOUNT_PROVIDERS = {
             'email',
         ],
         'AUTH_PARAMS': {
-            'access_type': 'online',
+            'access_type': 'offline',
         }
     }
 }
@@ -102,10 +102,10 @@ WSGI_APPLICATION = 'auth_test.wsgi.application'
 DATABASES = {
     'default': {
     'ENGINE': 'mysql.connector.django',
-    'NAME': 'django_login',
-    'USER':'root',
-    'PASSWORD':'aasm1385',
-    'HOST':'localhost',
+    'NAME': 'loginsite',
+    'USER':'Erfan',
+    'PASSWORD':'erfan2325',
+    'HOST':'',
     'PORT':'',
     }
 }
@@ -162,3 +162,6 @@ STATICFILES_DIRS = (
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'

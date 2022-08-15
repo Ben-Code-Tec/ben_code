@@ -1,46 +1,46 @@
+{% load crispy_forms_tags %}
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
+  <link rel="stylesheet" href="/static/css/sign up.css" /></link>
+
+  <a href="https://github.com/login/oauth/authorize/?scope=user%20user:email&client_id=908f44f68a29c7b594db">
+    <img alt="Github" src="http://127.0.0.1/static/img/github.png"
+    width="150" height="70">
+  </a>
+
   <form method="POST"></form>
   <div class="container">
   <title>Bc_Chat</title>
   <h1>Sign Up</h1>
-    <form >
+    <form method="POST">
+
+      {% csrf_token %}
+
       <div class="form-control">
-        <input type="text" required />
+        <input type="text" value="{{name_github}}" name="username" required />
         <label>Username</label>
       <div class="form-control">
-        <input type="email" required />
+        <input type="email" value="{{email_github}}" name="email" required />
         <label>Email</label>
       </div>
       <div class="form-control">
-        <input type="password" required name="password1"/>
+        <input type="password" autocomplete="new-password" required name="password1"/>
         <label>Password</label>
       </div>
       <div class="form-control">
-        <input type="password" required name="password2"/>
+        <input type="password" autocomplete="new-password" required name="password2"/>
         <label>Password confirmation</label>
       </div>
       <button class="btn">Submit</button>
       <p class="text"> If you already have an account ?
-      <a href="test sign.html">Sign IN. </a></p>
+      <a href="/login">Sign IN. </a></p>
   </form>
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="sign up.css" /></link>
   <body class="main-content" id="body">
     
   </body>
-
-
-  
-
-
-
-
-
-
-
-
-

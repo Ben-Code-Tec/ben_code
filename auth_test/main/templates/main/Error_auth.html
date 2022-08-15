@@ -1,0 +1,18 @@
+{% if user.is_authenticated %}
+
+<h1>Error</h1>
+
+
+<div class="container py-5">
+	<p class="text-center">You login before, you can<a href="/logout">logout</a> or you can go <a href="/">home</a></p>
+</div>
+
+{% else %}
+
+<div class="container py-5">
+
+    <p class="text-center">You can do this becauce you not login before <a href="/register">register</a> or if you have an account <a href="/login">login</a>.</p>
+
+</div>
+
+{% endif %}
