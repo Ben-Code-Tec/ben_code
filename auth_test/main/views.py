@@ -67,6 +67,9 @@ def logout_request(request):
 def register_error(request):
 	return render (request=request, template_name="main/register_error.html")
 
+def error_auth(request):
+	return render (request=request, template_name="main/Error_auth.html")
+
 def login_error(request):
 	return render (request=request, template_name="main/login_error.html")
 
@@ -100,4 +103,3 @@ def github_auth(request , return_def='all'):
 
 	else:
 		return redirect("/register?context={'name_github':%s , 'email_github':%s}" % (name_github , email_github))
-# (request , True , {'name_github':name_github , 'email_github':email_github})

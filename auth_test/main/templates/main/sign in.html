@@ -4,6 +4,11 @@
 
 <!DOCTYPE html>
 <html lang="en">
+   {% if user.is_authenticated %}
+   <meta http-equiv="refresh" content="0; URL='/error_auth'" />
+
+   {% else %}
+
    <link rel="stylesheet" href="/static/css/sign in.css" /></link>
    <div class="container">
 
@@ -33,3 +38,4 @@
 
 <body class="main-content" id="body">
 </body> 
+{% endif %}

@@ -9,7 +9,7 @@ urlpatterns = [
     path('login' , views.login_request , name='login'),
     path('register_error', views.register_error , name='register_error'),
     path('login_error' , views.login_error , name='login_error'),
+    path('error_auth' , views.error_auth , name='error_auth'),
     path('logout' , views.logout_request , name='logout'),
     path('test' , views.test_html , name='test'),
-    path('github/callback' , views.github_auth , name='github_auth'),
 ]
