@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'main',
 ]
 
-SITE_ID = 2
+SITE_ID = 3
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -80,15 +80,10 @@ WSGI_APPLICATION = 'auth_test.wsgi.application'
 
 DATABASES = {
     'default': {
-    'ENGINE': 'mysql.connector.django',
-    'NAME': 'loginsite',
-    'USER':'Erfan',
-    'PASSWORD':'erfan2325',
-    'HOST':'',
-    'PORT':'',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators

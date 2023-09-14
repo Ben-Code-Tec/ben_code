@@ -5,7 +5,7 @@ from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 import requests as RQ
 import re
-from github import Github
+# from github import Github
 
 def home_page_request (request):
 	return render (request=request, template_name="main/home.html")
